@@ -10,7 +10,7 @@ Redis (Remote Dictionary Server) is an open-source, in-memory data structure sto
 
 **Benefits and Drawbacks of Redis:**
 
-`	`**Benefits :**
+**Benefits :**
 
 - **High Speed**: Redis operates entirely in memory, providing extremely fast read and write operations.
 - **Versatile Data Structures**: Redis supports a wide range of data types, allowing for flexible data modelling.
@@ -19,7 +19,7 @@ Redis (Remote Dictionary Server) is an open-source, in-memory data structure sto
 - **Ease of Use**: Redis features a straightforward API and simple configuration, making it easy to deploy and manage.
 
 
-`        `**Drawbacks :** 
+**Drawbacks :** 
 
 - **Memory Consumption:** As an in-memory store, Redis can require significant RAM, which can be expensive.
 - **Limited Query Capabilities:** Unlike traditional relational databases, Redis lacks support for complex queries and joins.
@@ -206,7 +206,7 @@ Once the cluster creation is successful, run the following command on any host (
 You should be able to see all the cluster nodes,
 
 
-![](Aspose.Words.60852bc7-107b-45ac-a312-8ec7db2443fb.001.png)
+![my image]()
 
 **Step 4: Testing Redis Cluster Failover**
 
