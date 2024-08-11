@@ -96,7 +96,7 @@ In this Redis deployment, I have set up a master-slave architecture across six v
   - **Master Nodes:** The Redis instances running on 192.168.96.41, 192.168.96.68, and 192.168.96.74 act as the primary databases. They handle all write operations and propagate data changes to their respective slaves.
   - **Slave Nodes:** The instances on 192.168.95.52, 192.168.96.69, and 192.168.96.75 are configured as slaves. Each slave is paired with a master and receives a continuous stream of replication data from its master.** 
 
-`              `**In this setup:**
+**In this setup:**
 
 - The slave on **192.168.95.52** replicates data from the master at **192.168.96.41.**
 - The slave on **192.168.96.69** replicates data from the master at **192.168.96.68.**
