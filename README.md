@@ -252,6 +252,5 @@ This last section explains how to verify cluster data replication. We will creat
 
 
 ![](data_replication.png)
-
 This master-slave architecture ensures a balance of high availability, fault tolerance, and scalability, making it suitable for applications requiring both performance and reliability.
 
