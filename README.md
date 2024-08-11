@@ -206,7 +206,7 @@ Once the cluster creation is successful, run the following command on any host (
 You should be able to see all the cluster nodes,
 
 
-![my image]()
+![my image](all nodes.png)
 
 **Step 4: Testing Redis Cluster Failover**
 
