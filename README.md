@@ -238,7 +238,7 @@ Now let’s start the Redis service once again on the failed node and check all 
 
 ![](promoted_to_master.png)
 
-**192.168.96.74:6379** has been promoted to master.
+
 
 ![](slave_after_failover.png)
 
