@@ -162,7 +162,6 @@ Next, the cluster-config-file parameter sets the name of a cluster node’s clus
 
 
 
-
 The next useful cluster option is cluster-node-timeout, it is used to set the maximum amount of time in milliseconds an instance can be unavailable for it to be considered in a failure state. A value of 15000 is equivalent to 15 seconds.
 
 |cluster-node-timeout 15000|
@@ -205,30 +204,27 @@ Once the cluster creation is successful, run the following command on any host (
 
 You should be able to see all the cluster nodes,
 
-
-![my image](all nodes.png)
+![my image](all_nodes.png)
 
 **Step 4: Testing Redis Cluster Failover**
 
 In this section, we will demonstrate how to test a cluster failover. First, let’s take note of the masters.
 
-![](Aspose.Words.60852bc7-107b-45ac-a312-8ec7db2443fb.002.png)
+![](master.png)
 
 Also, take note of the Redis slaves.
 
-![](Aspose.Words.60852bc7-107b-45ac-a312-8ec7db2443fb.003.png)
+![](slave.png)
 
 
-
-
-` `Next, let’s stop the Redis service on one of the master nodes e.g **192.168.96.74** and check all master nodes in the cluster.
+Next, let’s stop the Redis service on one of the master nodes e.g **192.168.96.74** and check all master nodes in the cluster.
 
 |<p># systemctl stop redis</p><p># redis-cli -h 192.168.96.74 -p 6379 cluster nodes | grep master</p>|
 | :- |
 
 From the following screenshot, you can see that the node **192.168.96.74:6367** is in fail state and its slave **192.168.96.75:6379** has been promoted to master status.
 
-![](Aspose.Words.60852bc7-107b-45ac-a312-8ec7db2443fb.004.png)
+![](failover.png)
 
 Now let’s start the Redis service once again on the failed node and check all the masters in the cluster.
 
@@ -237,14 +233,11 @@ Now let’s start the Redis service once again on the failed node and check all 
 
 **192.168.96.75:6379** has been promoted to master.
 
-![](Aspose.Words.60852bc7-107b-45ac-a312-8ec7db2443fb.005.png)
+![](promoted_to_master.png)
 
 **192.168.96.74:6379** has been promoted to master.
 
-![](Aspose.Words.60852bc7-107b-45ac-a312-8ec7db2443fb.006.png)
-
-
-
+![](slave_after_failover.png)
 
 
 **Step 5: Testing Data Replication Across the Redis Cluster:**
@@ -255,7 +248,7 @@ This last section explains how to verify cluster data replication. We will creat
 | :- |
 
 
-![](Aspose.Words.60852bc7-107b-45ac-a312-8ec7db2443fb.007.png)
+![](data_replication.png)
 
 This master-slave architecture ensures a balance of high availability, fault tolerance, and scalability, making it suitable for applications requiring both performance and reliability.
 
