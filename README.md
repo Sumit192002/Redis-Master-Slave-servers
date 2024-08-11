@@ -219,8 +219,9 @@ Also, take note of the Redis slaves.
 
 Next, let’s stop the Redis service on one of the master nodes e.g **192.168.96.74** and check all master nodes in the cluster.
 
-|<p># systemctl stop redis</p><p># redis-cli -h 192.168.96.74 -p 6379 cluster nodes | grep master</p>|
+|# systemctl stop redis</p><p># redis-cli -h 192.168.96.74 -p 6379 cluster nodes | grep master|
 | :- |
+
 
 From the following screenshot, you can see that the node **192.168.96.74:6367** is in fail state and its slave **192.168.96.75:6379** has been promoted to master status.
 
