@@ -251,6 +251,8 @@ This last section explains how to verify cluster data replication. We will creat
 | :- |
 
 
-![](data_replication.png)
+![data replication](https://github.com/user-attachments/assets/932b79a3-8c1c-4fc5-a2c0-9b27efc488b2)
+
+
 This master-slave architecture ensures a balance of high availability, fault tolerance, and scalability, making it suitable for applications requiring both performance and reliability.
 
